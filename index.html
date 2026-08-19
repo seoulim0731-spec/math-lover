@@ -136,7 +136,7 @@
     };
 
     // 2. 실시간 랭킹 및 갤러리 불러오기
-    const q = query(collection(db, "rankings"), orderBy("streak", "desc"), limit(15));
+    const q = query(collection(db, "rankings"), orderBy("score", "desc"), limit(15));
     onSnapshot(q, (snapshot) => {
       const leaderboard = document.getElementById("leaderboard");
       const gallery = document.getElementById("gallery");
